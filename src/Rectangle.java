@@ -1,17 +1,19 @@
-public class Rectangle {
-    private final Length length;
-    private final Breadth breadth;
+public class Rectangle implements Shape{
+    private final double length;
+    private final double width;
 
-    public Rectangle(Length length, Breadth breadth) {
+    public Rectangle(double length, double width) {
         this.length = length;
-        this.breadth = breadth;
+        this.width = width;
     }
 
-    public int area() {
-        return length.getValue()*breadth.getValue();
+    @Override
+    public double area() {
+        return length* width;
     }
 
-    public int perimeter() {
-        return 2*(length.getValue()+breadth.getValue());
+    @Override
+    public double perimeter() {
+        return 2*(length+ width);
     }
 }
