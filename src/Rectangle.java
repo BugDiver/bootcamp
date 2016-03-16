@@ -1,4 +1,7 @@
-public class Rectangle implements Shape{
+/*
+ * perform all methods which implies length and width of rectangle
+ */
+public class Rectangle implements Shape {
     private final double length;
     private final double width;
 
@@ -8,12 +11,12 @@ public class Rectangle implements Shape{
     }
 
     @Override
-    public double area() {
-        return length* width;
+    public double calculateArea() {
+        return length * width;
     }
 
     @Override
-    public double perimeter() {
-        return 2*(length+ width);
+    public double calculatePerimeter() {
+        return 2 * (length + width);
     }
 }
