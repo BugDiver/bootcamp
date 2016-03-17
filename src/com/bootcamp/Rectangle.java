@@ -2,16 +2,15 @@
  * perform all methods which implies length and width of rectangle
  */
 
-
 package com.bootcamp;
 
 import com.bootcamp.exceptions.NonPositiveArgumentException;
 
-public class Rectangle implements Shape {
+public class Rectangle{
     private final double length;
     private final double width;
 
-    private Rectangle(double length, double width) {
+    protected Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
@@ -24,12 +23,10 @@ public class Rectangle implements Shape {
         return new Rectangle(length,width);
     }
 
-    @Override
     public double calculateArea() {
         return length * width;
     }
 
-    @Override
     public double calculatePerimeter() {
         return 2 * (length + width);
     }

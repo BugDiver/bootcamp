@@ -31,14 +31,14 @@ public class RectangleTest {
     @Test
     public void should_not_be_able_to_create_rectangle_with_non_positive_length() throws Exception {
         thrown.expect(NonPositiveArgumentException.class);
-        thrown.expectMessage("expected positive measurement but got -10");
+        thrown.expectMessage("Expected positive measurements but got -10");
         Rectangle plot = Rectangle.create(-10, 4);
     }
 
     @Test
     public void should_not_be_able_to_create_rectangle_with_non_positive_width() throws Exception {
         thrown.expect(NonPositiveArgumentException.class);
-        thrown.expectMessage("expected positive measurement but got -4");
+        thrown.expectMessage("Expected positive measurements but got -4");
         Rectangle plot2 = Rectangle.create(10, -4);
     }
 }
