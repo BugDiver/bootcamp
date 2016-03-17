@@ -1,6 +1,10 @@
 /*
  * perform all methods which implies length and width of rectangle
  */
+
+
+package com.bootcamp;
+
 public class Rectangle implements Shape {
     private final double length;
     private final double width;
