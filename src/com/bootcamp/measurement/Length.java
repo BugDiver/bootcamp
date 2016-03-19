@@ -1,6 +1,7 @@
 package com.bootcamp.measurement;
 
-public enum Length implements Unit{
+
+public enum Length implements Unit {
     FEET(12),
     INCH(1),
     CM(0.4),
@@ -20,11 +21,6 @@ public enum Length implements Unit{
     @Override
     public Unit standardOutput() {
         return Length.INCH;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 
 }
