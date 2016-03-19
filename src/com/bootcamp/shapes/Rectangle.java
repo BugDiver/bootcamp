@@ -2,7 +2,7 @@
  * perform all methods which implies length and width of rectangle
  */
 
-package com.bootcamp;
+package com.bootcamp.shapes;
 
 import com.bootcamp.exceptions.NonPositiveArgumentException;
 

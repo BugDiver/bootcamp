@@ -1,4 +1,4 @@
-package com.bootcamp;
+package com.bootcamp.shapes;
 
 import com.bootcamp.exceptions.NonPositiveArgumentException;
 
