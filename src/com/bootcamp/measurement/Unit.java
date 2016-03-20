@@ -1,6 +1,6 @@
 package com.bootcamp.measurement;
 
 public interface Unit {
-    double getMultiplier();
-    Unit standardOutput();
+    double getConversionFactorForInch();
+    Unit standardUnit();
 }

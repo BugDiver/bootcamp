@@ -18,13 +18,13 @@ public class Measurement {
         return (double) newValue / factor;
     }
     private Measurement convertToStandard() {
-        double value = round(this.value  * unit.getMultiplier() ,2);
-        Unit unit = this.unit.standardOutput();
+        double value = round(this.value  * unit.getConversionFactorForInch() ,2);
+        Unit unit = this.unit.standardUnit();
         return new Measurement(value,unit);
     }
     private Measurement convert(Unit unit) {
         Measurement self = convertToStandard();
-        double newValue = round(self.value / unit.getMultiplier() ,2);
+        double newValue = round(self.value / unit.getConversionFactorForInch() ,2);
         return  new Measurement(newValue,unit);
     }
     public  Measurement add (Measurement measurement) throws IdiotTeacherException {
@@ -33,7 +33,7 @@ public class Measurement {
         Measurement measurementToAdd = measurement.convertToStandard();
         Measurement self = convertToStandard();
         double sum = round(self.value + measurementToAdd.value ,2);
-        return new Measurement(sum ,unit.standardOutput());
+        return new Measurement(sum ,unit.standardUnit());
     }
     public boolean compare ( Measurement measurement) throws IllegalComparisonException {
         if(!isOperable(measurement))
