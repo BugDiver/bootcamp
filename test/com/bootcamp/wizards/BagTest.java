@@ -58,7 +58,7 @@ public class BagTest {
     }
 
     @Test
-    public void should_throw_exception_in_addition_of_red_green_balls_more_than_double_of_green() throws Exception{
+    public void should_throw_exception_in_addition_of_red_balls_more_than_double_of_green() throws Exception{
         thrown.expect(BrokenRulesException.class);
         thrown.expectMessage("You are not supposed to break the placement rules.");
         Bag bag = new Bag(12);
@@ -70,4 +70,12 @@ public class BagTest {
 
     }
 
+    @Test
+    public void should_allow_to_add_as_many_blue_balls_as_the_size_of_bag() throws Exception {
+        Bag bag = new Bag(3);
+
+        bag.add(new Ball(Colour.BLUE));
+        bag.add(new Ball(Colour.BLUE));
+        assertEquals( true ,bag.add(new Ball(Colour.BLUE)));
+    }
 }
