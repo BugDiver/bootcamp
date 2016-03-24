@@ -20,4 +20,12 @@ public class Ball {
     public static Ball createRedBall() {
         return new Ball(Colour.RED);
     }
+
+    public static Ball createBlueBall() {
+        return new Ball(Colour.BLUE);
+    }
+
+    public static Ball createYellowBall() {
+        return new Ball(Colour.YELLOW);
+    }
 }
